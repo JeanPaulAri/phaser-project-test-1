@@ -7,7 +7,7 @@
 
 This is a TypeScript specific fork of [phaser3-parcel-template](https://github.com/ourcade/phaser3-parcel-template).
 
-## This is the Master branch
+## This is the Development branch
 
 ## Prerequisites
 
