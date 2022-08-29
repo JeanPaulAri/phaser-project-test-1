@@ -7,6 +7,8 @@
 
 This is a TypeScript specific fork of [phaser3-parcel-template](https://github.com/ourcade/phaser3-parcel-template).
 
+## This is the Master branch
+
 ## Prerequisites
 
 You'll need [Node.js](https://nodejs.org/en/), [npm](https://www.npmjs.com/), and [Parcel](https://parceljs.org/) installed.
