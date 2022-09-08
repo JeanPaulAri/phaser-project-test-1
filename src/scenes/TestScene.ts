@@ -1,8 +1,8 @@
 import Phaser from 'phaser';
 
-export default class HelloWorldScene extends Phaser.Scene {
+export default class TestScene extends Phaser.Scene {
   constructor() {
-    super({ key: 'Hello-World', active: true });
+    super({ key: 'Test-Scene', active: false });
   }
 
   preload() {
@@ -18,6 +18,6 @@ export default class HelloWorldScene extends Phaser.Scene {
   }
 
   create() {
-    this.add.image(400, 300, 'sky');
+    this.add.image(400, 300, 'star');
   }
 }
