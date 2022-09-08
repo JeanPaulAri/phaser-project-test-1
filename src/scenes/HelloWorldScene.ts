@@ -1,6 +1,8 @@
 import Phaser from 'phaser';
 
 export default class HelloWorldScene extends Phaser.Scene {
+  private platforms?: Phaser.Physics.Arcade.StaticGroup;
+
   constructor() {
     super({ key: 'Hello-World', active: true });
   }
@@ -19,5 +21,8 @@ export default class HelloWorldScene extends Phaser.Scene {
 
   create() {
     this.add.image(400, 300, 'sky');
+    this.add.image(400, 300, 'star');
+    this.platforms = this.physics.add.staticGroup();
+    this.platforms.create(400, 568, 'ground');
   }
 }
