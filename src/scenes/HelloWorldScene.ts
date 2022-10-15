@@ -1,10 +1,14 @@
 import Phaser from 'phaser';
 
 export default class HelloWorldScene extends Phaser.Scene {
+  // "declaring group of platform"
   private platforms?: Phaser.Physics.Arcade.StaticGroup;
 
+  // "declaring player"
+  private player?: Phaser.Physics.Arcade.Sprite;
+
   constructor() {
-    super({ key: 'Hello-World', active: true });
+    super({ key: 'Hello-World' });
   }
 
   preload() {
@@ -22,9 +26,9 @@ export default class HelloWorldScene extends Phaser.Scene {
   create() {
     this.add.image(400, 300, 'sky');
     this.platforms = this.physics.add.staticGroup();
-    const ground = this.platforms.create(400, 568, 'ground') as
+    const baseGround = this.platforms.create(400, 568, 'ground') as
       Phaser.Physics.Arcade.Sprite;
-    ground
+    baseGround
       .setScale(2)
       .refreshBody();
     this.platforms.create(600, 400, 'ground');
