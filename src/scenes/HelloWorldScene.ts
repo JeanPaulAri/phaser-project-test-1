@@ -34,5 +34,17 @@ export default class HelloWorldScene extends Phaser.Scene {
     this.platforms.create(600, 400, 'ground');
     this.platforms.create(50, 250, 'ground');
     this.platforms.create(750, 220, 'ground');
+
+    this.player = this.physics.add.sprite(100, 450, 'player');
+    this.player.setBounce(0.2);
+    this.player.setCollideWorldBounds(true);
+
+    this.anims.create({
+      key: 'left',
+      frames: this.anims.generateFrameNumbers('dude', {
+        start: 0,
+        end: 3,
+      }),
+    });
   }
 }
